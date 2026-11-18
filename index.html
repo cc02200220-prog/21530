@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f1df" />
+    <title>小恐龍衝衝衝</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>小恐龍</span>
+        </div>
+        <div class="scoreboard" aria-live="polite">
+          <span>分數 <strong id="score">00000</strong></span>
+          <span class="divider"></span>
+          <span>最高 <strong id="highScore">00000</strong></span>
+        </div>
+      </header>
+
+      <section class="game-card" aria-label="小恐龍躲避障礙遊戲">
+        <canvas id="gameCanvas" width="960" height="420"></canvas>
+
+        <div class="start-panel" id="startPanel">
+          <div class="mini-dino" aria-hidden="true">
+            <span class="mini-eye"></span>
+          </div>
+          <h1 id="panelTitle">準備好了嗎？</h1>
+          <p id="panelText">按空白鍵或點一下畫面開始</p>
+          <button id="actionButton" type="button">開始遊戲</button>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <div class="control-tip">
+          <span class="key">空白鍵</span>
+          <span>跳躍</span>
+        </div>
+        <div class="control-tip">
+          <span class="key wide">↓</span>
+          <span>蹲低</span>
+        </div>
+      </footer>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
